@@ -6,9 +6,8 @@ import os
 
 app = Flask (__name__)
 
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
-DBS_NAME = 'airportLA'
+MONGO_URI = os.getenv('mongodb://root:nitromethane85@ds141474.mlab.com:41474/heroku_4rfzp788', 'mongodb://localhost:27017')
+DBS_NAME = os.getenv('heroku_4rfzp788', 'airportLA')
 COLLECTION_NAME = 'airport'
 
 
@@ -36,7 +35,7 @@ def airport():
     # Open a connection to MongoDB using a with statement such that the
     # connection will be closed as soon as we exit the with statement
     # The MONGO_URI connection is required when hosted using a remote mongo db.
-    with MongoClient () as conn:
+    with MongoClient (MONGO_URI) as conn:
         # Define which collection we wish to access
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
