@@ -6,8 +6,8 @@ import os
 
 app = Flask (__name__)
 
-MONGO_URI = os.getenv('mongodb://root:nitromethane85@ds141474.mlab.com:41474/heroku_4rfzp788', 'mongodb://localhost:27017')
-DBS_NAME = os.getenv('heroku_4rfzp788', 'airportLA')
+MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017')
+DBS_NAME = os.getenv('MONGO_DB_NAME', 'airportLA')
 COLLECTION_NAME = 'airport'
 
 
