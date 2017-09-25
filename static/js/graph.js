@@ -34,7 +34,6 @@ function makeGraphs(error, projectsJson) {
     var ndx = crossfilter(airportLA);
 
    var dateDim = ndx.dimension(function (d) {
-          console.log(d["ReportPeriod"]);
        return d["ReportPeriod"];
    });
 
