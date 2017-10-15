@@ -23,7 +23,7 @@ sub menus,  addition of the graph elements to the body as well as two modals to 
 
 The testing that I carried out on my application was mainly associated to the responsiveness.  Whilst I used the Google
 Chrome Developer tool I also used a website [CodeBeautify](https://codebeautify.org/responsive-website-tester#allView) to inspect responsiveness. 
-Once the construction of the application was complete I then deployed it using the cloud based hosting platform Heroku.   
+Once the construction of the application was complete I then deployed it using the cloud based hosting platform Heroku, see [Stream Two Project](https://aqueous-everglades-28256.herokuapp.com/).   
 
 
 ### Included Technologies:
